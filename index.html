@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ana Blagojević &#124; Portfolio</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="keywords" content="portfolio,web,design,web design,programming,code,coding,developer,web developer,adobe,photoshop,illustrator,german,html,css,sass,sql,seo,search engine optimization"/>
+        <meta name="description" content="Web developer from Serbia."/>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+        <link rel="icon" href="slike/web-design.png" type="image/gif" sizes="16x16"/>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <!--Header sekcija sa hamburger menijem-->
+        <header>
+            <img src="slike/webdesign.png" alt="logo"/>
+            <br/>
+            <h1>Ana Blagojević</h1>
+            <br/>
+            <h2>&ndash;Web developer&ndash;</h2>
+        </header>
+        <!--Hamburger menu-->
+        <div class="menu-wrap">
+            <input type="checkbox" class="checkbox"/>
+            <div class="hamburger"><div></div></div>
+            <div class="menu" id="Meni">
+                <div>
+                    <div>
+                        <ul>
+                            <li><a href="index.html" onclick='closeMeni()'>Home</a></li>
+                            <li><a href="#services" onclick='closeMeni()'>Services</a></li>
+                            <li><a href="#myskills"  onclick='closeMeni()'>My skills</a></li>
+                            <li><a href="#myprojects"  onclick='closeMeni()'>My projects</a></li>
+                            <li><a href="#aboutme" onclick='closeMeni()'>About me</a></li>
+                            <li><a href="#contact" onclick='closeMeni()'>Contact</a></li>
+                            <li><a href="#links" onclick='closeMeni()'>Links</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Sekcija za Services I provide-->
+        <div id="services">
+            <!--Title-->
+            <div class="title">
+                <h2>Services I provide</h2>
+                <hr/>
+            </div>
+            <!--Tri diva za usluge - services-->
+            <div id="three">
+                <div class="s">
+                    <img class="slike" src="slike/wd.jpg" alt="wd"/>
+                    <p class="center">Web Design</p>
+                    <p class="text1">
+                        Implies website development, which means combining colors and creating content of a website.
+                        I always follow new trends and make sure to fulfill our customers’ expectations.
+                        Rest assured that your site will be made according to the latest standards.
+                    </p>
+                </div>
+
+                <div class="s">
+                    <img class="slike" src="slike/gd.jpg" alt="gd"/>
+                    <p class="center">Graphic Design</p>
+                    <p class="text1">
+                        This is the art, profession and academic discipline that implies creating visual content by
+                        using typography and pictures to meet users’ specific needs and desires.
+                        I use Adobe programs, such as Illustrator and Photoshop, to realize your ideas.
+                    </p>
+                </div>
+
+                <div class="s">
+                    <img class="slike" src="slike/seo.jpg" alt="seo"/>
+                    <p class="center">Search Engine Optimization</p>
+                    <p class="text1">
+                        Improving the quality and quantity of website traffic to a website or a web page from search engines.
+                        My mission is to make sure that your website is on top of the Googles’ results, which is one of the most important things.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--Sekcija za My skills-->
+        <div id="myskills">
+            <div class="title">
+                <h2>My skills</h2>
+                <hr/>
+            </div>
+            <!--Šest slika sa nazivima veština-->
+            <div id="six">
+
+                <div class="skill">
+                    <img src="slike/html5.png" alt="html"/>
+                    <p class="names">HTML 5</p>
+                </div>
+
+                <div class="skill">
+                    <img src="slike/css3.png" alt="css"/>
+                    <p class="names">CSS/SASS</p>
+                </div>
+
+                <div class="skill">
+                    <img src="slike/sql.png" alt="sql"/>
+                    <p class="names">Structured Query</p>
+                </div>
+
+                <div class="skill">
+                    <img src="slike/seo.png" alt="seo"/>
+                    <p class="names">SEO-optimization</p>
+                </div>
+
+                <div class="skill">
+                    <img src="slike/photoshop.png" alt="photoshop"/>
+                    <p class="names">Photoshop</p>
+                </div>
+
+                <div class="skill">
+                    <img src="slike/illustrator.png" alt="illustrator"/>
+                    <p class="names">Illustrator</p>
+                </div>
+
+            </div>
+        </div>
+        <!--Sekcija za My projects - tri projekta sa tri screenshot-ovane slike sajtova-->
+        <div id="myprojects">
+
+            <div class="title">
+                <h2>My projects</h2>
+                <hr/>
+            </div>
+            <!--Projekti-->
+            <div id="projects">
+                <div class="names2">
+                    <img class="slike2" src="slike/ampel.png" alt="ampel"/>
+                    <p class="n">Ampel Cafe</p>
+                    <p class="text2">
+                        My first website. It was made for Ampel cafe’s needs, 
+                        which is the new cafe in the center of Belgrade.
+                        I used HTML5 and CSS3 to make it.
+                        This website is not responsive. Check it on the link below.
+                    </p>
+                    <p class="c"><a href="https://anablagojevic.github.io/anablagojevic/index.html" target="_blank">Check it out</a></p>
+                </div>
+
+                <div class="names2">
+                    <img class="slike2" src="slike/saf.png" alt="saf"/>
+                    <p class="n">Sapphire Art Studio</p>
+                    <p class="text2">
+                        This site was made for a very special art studio that
+                        works only with sapphires. It is a world-famous luxurious brand.
+                        This website is responsive and made by using HTML5 and SASS/CSS3. 
+                    </p>
+                    <p class="c"><a href="#">Check it out</a></p>
+                </div>
+                
+                <div class="names2">
+                    <img class="slike2" src="slike/lapiste.png" alt="lapiste"/>
+                    <p class="n">La piste</p>
+                    <p class="text2">
+                        A website for French fashion brend. They are famous for elegant
+                        and minimalistic clothes. This site is also responsive and made by using
+                        HTML5 and SASS/CSS3, including some JavaScript elements.
+                    </p>
+                    <p class="c"><a href="#">Check it out</a></p>
+                </div>
+            </div>
+
+        </div>
+        <!--Sekcija za About me - moja slika i kratak opis-->
+        <div id="aboutme">
+
+            <div class="title">
+                <h2>About me</h2>
+                <hr/>
+            </div>
+            <!--Div za sliku i tekst-->
+            <div id="about">
+
+                <img id="ana" src="slike/ana.jpeg" alt="ana"/>
+
+                <div id="second">
+                    <p id="a">
+                        Hi! My name is Ana Blagojević and I am a web developer from Belgrade. 
+                        I graduated from Economic School in Zemun. I’ve always been passionate 
+                        about art, fashion and design. In the end of high school I discovered my interest in
+                        web design and programming. Now I am first year of ICT College.
+                        I also learn German at the Goethe Institut Belgrade.
+                        I am very friendly and communicative person who is always willing
+                        to learn new things.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <!--Sekcija za Contact me - forma-->
+        <div id="contact">
+
+            <div class="title">
+                <h2>Contact me</h2>
+                <hr/>
+            </div>
+            <!--Forma-->
+            <div id="inputs">
+                <form action-method="POST">
+                    <input type="text" name="name" id="name" placeholder="Your name*"/>
+                    <input type="text" name="gmail" id="name" placeholder="Your email address*"/>
+                    <input type="text" name="number" id="name" placeholder="Your contact number*"/>
+                    <textarea name="message" placeholder="Your message"></textarea>
+                    <div id="buttons">
+                        <button type="reset">Reset</button>
+                        <button type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <!--Footer sa linkovima-->
+        <footer id="links">
+            <div class="last">
+                <img src="slike/linkedin.png" alt="mail"/>
+                <a href="https://www.linkedin.com/" target="_blank" class="con">Visit my LinkedIN profile</a>
+                <img src="slike/whatsapp.png" alt="wapp"/>
+                <a href="https://www.whatsapp.com/" target="_blank" class="con">Whatsapp - contact me</a>
+                <img src="slike/mail.png" alt="mail"/>
+                <a href="#" class="con">Email: ana.blagojevic.99.20&#64;ict.edu.rs</a>
+            </div>
+            <!--Linkovi za SASS, CSS, Responsive dizajn i Sitemap-->
+            <div class="last">
+                <a href="css/style.scss" target="_blank" class="con">SASS</a>
+                <a href="css/style.css" target="_blank" class="con">Original CSS</a>
+                <a href="css/responsive.css" target="_blank" class="con">Responsive CSS</a>
+                <a href="sitemap.xml" target="_blank" class="con">Sitemap</a>
+                <p class="con">Copyrights &#169; Ana Blagojević</p>
+            </div>
+        </footer>
+
+    </body>
+</html>
