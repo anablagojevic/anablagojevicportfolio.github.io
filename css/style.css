@@ -1,0 +1,719 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style-type: none;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.3;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*Ovde ce se nalaziti mixini*/
+/*Dizajn body-ja*/
+body {
+  background-color: #1e1e20;
+  width: 100%;
+}
+
+/*Dizajn header-a + hamburger menu*/
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: change 5s infinite;
+          animation: change 5s infinite;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@-webkit-keyframes change {
+  0% {
+    background-color: #5515a8;
+  }
+  20% {
+    background-color: #47129c;
+  }
+  40% {
+    background-color: #180cbb;
+  }
+  60% {
+    background-color: #0d3299;
+  }
+  80% {
+    background-color: #4a12a5;
+  }
+  100% {
+    background-color: #5515a8;
+  }
+}
+
+@keyframes change {
+  0% {
+    background-color: #5515a8;
+  }
+  20% {
+    background-color: #47129c;
+  }
+  40% {
+    background-color: #180cbb;
+  }
+  60% {
+    background-color: #0d3299;
+  }
+  80% {
+    background-color: #4a12a5;
+  }
+  100% {
+    background-color: #5515a8;
+  }
+}
+
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.menu-wrap .checkbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  margin: 20px;
+}
+
+.menu-wrap .checkbox:checked + .hamburger > div {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.menu-wrap .checkbox:checked + .hamburger > div:before {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.menu-wrap .checkbox:checked + .hamburger > div:after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.menu-wrap .checkbox:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .checkbox:checked ~ .menu > div {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.menu-wrap .checkbox:checked ~ .menu > div > div {
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.menu-wrap .hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background: white;
+  background: rgba(245, 241, 241, 0.56);
+  border-radius: 20%;
+  margin: 20px;
+}
+
+.menu-wrap .hamburger > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 15%;
+}
+
+.menu-wrap .hamburger > div:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 15%;
+}
+
+.menu-wrap .hamburger > div:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  top: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 15%;
+}
+
+.menu-wrap .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.menu-wrap .menu > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  background: black;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  font-size: 1.5rem;
+  padding: 1rem;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/*Div za Services I provide*/
+#services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+#services .title {
+  margin: 35px 0px;
+}
+
+#services #three {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#services #three .s {
+  width: 400px;
+  margin: 0px 20px 15px 15px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 4%;
+  -webkit-box-shadow: 0px 3px 15px 6px;
+          box-shadow: 0px 3px 15px 6px;
+  color: #0d0d0e;
+}
+
+#services #three .s:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#services #three .s .slike {
+  width: 100%;
+  border-radius: 4%;
+}
+
+#services #three .s .center {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#services #three .s .text1 {
+  font-size: 17px;
+  text-align: center;
+}
+
+/*Div za My skills*/
+#myskills {
+  -webkit-animation: change 5s infinite;
+          animation: change 5s infinite;
+  width: 100%;
+  margin: 20px 0px;
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@keyframes change {
+  0% {
+    background-color: #5515a8;
+  }
+  20% {
+    background-color: #47129c;
+  }
+  40% {
+    background-color: #180cbb;
+  }
+  60% {
+    background-color: #0d3299;
+  }
+  80% {
+    background-color: #4a12a5;
+  }
+  100% {
+    background-color: #5515a8;
+  }
+}
+
+#myskills #six {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  padding: 10px;
+}
+
+#myskills #six .skill {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 4%;
+  -webkit-box-shadow: 0px 3px 15px 6px;
+          box-shadow: 0px 3px 15px 6px;
+  color: #0d0d0e;
+}
+
+#myskills #six .skill .names {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/*Div za My Projects*/
+#myprojects {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#myprojects #projects {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px 0px;
+}
+
+#myprojects #projects .names2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 400px;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 4%;
+  -webkit-box-shadow: 0px 3px 15px 6px;
+          box-shadow: 0px 3px 15px 6px;
+  color: #0d0d0e;
+}
+
+#myprojects #projects .names2 .slike2 {
+  width: 100%;
+}
+
+#myprojects #projects .names2 .n {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+#myprojects #projects .names2 .text2 {
+  font-size: 19px;
+  text-align: center;
+}
+
+#myprojects #projects .names2 .c {
+  margin: 15px 0px;
+  padding: 5px;
+  border: 1px solid #fff;
+}
+
+#myprojects #projects .names2 .c :hover {
+  color: #6f7177;
+}
+
+/*Div za About me*/
+#aboutme {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  margin: 20px 0px;
+}
+
+#aboutme #about {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 10px 0px;
+  padding: 5px 0px;
+}
+
+#aboutme #about #ana {
+  width: 350px;
+  border-radius: 20%;
+  -webkit-box-shadow: 0px 1px 20px 5px;
+          box-shadow: 0px 1px 20px 5px;
+  color: #0d0d0e;
+}
+
+#aboutme #about #second {
+  width: 65%;
+}
+
+#aboutme #about #second #a {
+  font-size: 20px;
+  text-align: center;
+  margin-left: 50px;
+}
+
+/*Div za Contact me*/
+#contact {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0px 1px 20px 5px;
+          box-shadow: 0px 1px 20px 5px;
+  color: #0d0d0e;
+  padding: 20px 0px;
+  margin: 50px 0px;
+  background: linear-gradient(135deg, #51239c 25%, #806fca 100%);
+}
+
+#contact #inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 600px;
+  margin: 20px 0px;
+  padding: 10px;
+}
+
+#contact #inputs input, #contact #inputs textarea, #contact #inputs #buttons button {
+  background: rgba(0, 0, 0, 0.301);
+  border: none;
+  border-radius: 15px;
+  font-size: inherit;
+  outline: none;
+  width: 100%;
+  height: 50px;
+  margin: 5px 0px;
+  padding: 5px;
+}
+
+#contact #inputs textarea {
+  height: 200px;
+  resize: none;
+}
+
+#contact #inputs #buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contact #inputs #buttons button {
+  width: 100px;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+
+#contact #inputs #buttons button:hover {
+  background: rgba(250, 246, 246, 0.253);
+}
+
+/*Div za footer - tu se nalaze linkovi fajlova*/
+#links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+#links .last {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+}
+
+#links .last .con {
+  margin: 5px 0px;
+}
+/*# sourceMappingURL=style.css.map */
