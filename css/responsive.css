@@ -65,6 +65,12 @@
 }
 /*Rezolucija 8*/
 @media screen and (max-width: 1110px){
+    header h1{
+        font-size: 28px;
+    }
+    header h2{
+        font-size: 22px;
+    }
     #myskills #six{
         width: 80%;
     }
@@ -77,6 +83,15 @@
 }
 /*Rezolucija 9*/
 @media screen and (max-width: 685px){
+    header h1{
+        font-size: 22px;
+    }
+    header h2{
+        font-size: 20px;
+    }
+    header .logo{
+        width: 125px;
+    }
     #services #three .s{
         width: 70%;
     }
@@ -95,6 +110,15 @@
 }
 /*Rezolucija 10*/
 @media screen and (max-width: 574px){
+    header h1{
+        font-size: 20px;
+    }
+    header h2{
+        font-size: 18px;
+    }
+    header .f{
+        font-size: 13px;
+    }
     #aboutme #about #ana{
         width: 300px;
     }
@@ -104,6 +128,15 @@
 }
 /*Rezolucija 11*/
 @media screen and (max-width: 470px){
+    header h1{
+        font-size: 18px;
+    }
+    header h2{
+        font-size: 15px;
+    }
+    header .logo{
+        width: 110px;
+    }
     #services #three .s{
         width: 70%;
     }
@@ -120,6 +153,15 @@
 }
 /*Rezolucija 12*/
 @media screen and (max-width: 375px){
+    header h1{
+        font-size: 15px;
+    }
+    header h2{
+        font-size: 12px;
+    }
+    header .f{
+        font-size: 10px;
+    }
     #services #three .s .text1{
         font-size: 15px;
     }

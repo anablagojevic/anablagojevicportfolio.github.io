@@ -71,6 +71,11 @@ header{
     height: 100vh;
     position: relative;
     flex-direction: column;
+	.f{
+		border: 1px solid #fff;
+		border-radius: 5%;
+		padding: 5px;
+	}
 }
 
 .menu-wrap {
@@ -201,7 +206,7 @@ header{
 	flex-direction: column;
     width: $full;
 	.title{
-		margin: 35px 0px;
+		margin: 37px 0px;
 	}
 	#three{
 		@include fleks;
@@ -230,6 +235,7 @@ header{
 			}
 			.text1{
 				font-size: 17px;
+				line-height: 1.5;
 				text-align: $c;
 			}
 		}
@@ -280,12 +286,14 @@ header{
 			width: 400px;
 			padding: 10px;
 			margin: 20px;
+			background-color: #28282b;
 			@include shadow;
 			.slike2{
 				width: $full;
 			}
 			.n{
 				font-size: 20px;
+				color: #dcd2ff;
 				font-weight: bold;
 				text-align: $c;
 				margin: 10px 0px;
@@ -297,7 +305,7 @@ header{
 			.c{
 				margin: 15px 0px;
 				padding: 5px;
-				border: 1px solid #fff;
+				border: 1px solid #c5b8f8;
 				:hover{
 					color: #6f7177;
 				}
@@ -330,6 +338,9 @@ header{
 				font-size: 20px;
 				text-align: $c;
 				margin-left: 50px;
+				.i{
+					color: #d4caf5;
+				}
 			}
 		}
 	}
@@ -360,18 +371,26 @@ header{
 			width: $full;
 			height: 50px;
 			margin: 5px 0px;
-			padding: 5px;
+			padding-left: 12px;
+			&::placeholder{
+				color: rgb(194, 186, 186);
+			}
 		}
 		textarea{
 			@extend input;
 			height: 200px;
 			resize: none;
+			padding: 12px 0px 0px 12px;
+			&::placeholder{
+				color: rgb(194, 186, 186);
+			}
 		}
 		#buttons{
 			@include fleks;
 			justify-content: $c;
 			button{
 				@extend input;
+				padding: 0px;
 				width: 100px;
 				margin: 0px 10px;
 				cursor: pointer;
