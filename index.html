@@ -4,8 +4,8 @@
         <title>Ana Blagojević &#124; Portfolio</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="keywords" content="portfolio,web,design,web design,programming,code,coding,developer,web developer,adobe,photoshop,illustrator,german,html,css,sass,sql,seo,search engine optimization"/>
-        <meta name="description" content="Web developer from Serbia."/>
+        <meta name="keywords" content="portfolio,sajtovi,programer,web,design,web design,programming,code,coding,developer,web developer,adobe,photoshop,illustrator,german,html,css,sass,sql,seo,search engine optimization"/>
+        <meta name="description" content="Web developer from Serbia"/>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
         <link rel="stylesheet" type="text/css" href="css/responsive.css"/>
         <link rel="icon" href="slike/web-design.png" type="image/gif" sizes="16x16"/>
@@ -14,11 +14,13 @@
     <body>
         <!--Header sekcija sa hamburger menijem-->
         <header>
-            <img src="slike/webdesign.png" alt="logo"/>
+            <img src="slike/desktop5.png" alt="logo" class="logo"/>
             <br/>
-            <h1>Ana Blagojević</h1>
+            <h1>Welcome to Ana Blagojević's portfolio!</h1>
             <br/>
-            <h2>&ndash;Web developer&ndash;</h2>
+            <h2>&ndash; Web developer from Serbia &ndash;</h2>
+            <br/>
+            <a href="#services" class="f">Find ouf more</a>
         </header>
         <!--Hamburger menu-->
         <div class="menu-wrap">
@@ -44,8 +46,7 @@
         <div id="services">
             <!--Title-->
             <div class="title">
-                <h2>Services I provide</h2>
-                <hr/>
+                <h2>&bullet; Services I provide &bullet;</h2>
             </div>
             <!--Tri diva za usluge - services-->
             <div id="three">
@@ -82,8 +83,7 @@
         <!--Sekcija za My skills-->
         <div id="myskills">
             <div class="title">
-                <h2>My skills</h2>
-                <hr/>
+                <h2>&bullet; My skills &bullet;</h2>
             </div>
             <!--Šest slika sa nazivima veština-->
             <div id="six">
@@ -124,8 +124,7 @@
         <div id="myprojects">
 
             <div class="title">
-                <h2>My projects</h2>
-                <hr/>
+                <h2>&bullet; My projects &bullet;</h2>
             </div>
             <!--Projekti-->
             <div id="projects">
@@ -169,8 +168,7 @@
         <div id="aboutme">
 
             <div class="title">
-                <h2>About me</h2>
-                <hr/>
+                <h2>&bullet; About me &bullet;</h2>
             </div>
             <!--Div za sliku i tekst-->
             <div id="about">
@@ -182,7 +180,8 @@
                         Hi! My name is Ana Blagojević and I am a web developer from Belgrade. 
                         I graduated from Economic School in Zemun. I’ve always been passionate 
                         about art, fashion and design. In the end of high school I discovered my interest in
-                        web design and programming. Now I am first year of ICT College.
+                        web design and programming. Now I am first year of 
+                        <a href="https://www.ict.edu.rs/" target="_blank" class="i">ICT College</a>.
                         I also learn German at the Goethe Institut Belgrade.
                         I am very friendly and communicative person who is always willing
                         to learn new things.
@@ -195,8 +194,7 @@
         <div id="contact">
 
             <div class="title">
-                <h2>Contact me</h2>
-                <hr/>
+                <h2>&bullet; Contact me &bullet;</h2>
             </div>
             <!--Forma-->
             <div id="inputs">
@@ -204,7 +202,7 @@
                     <input type="text" name="name" id="name" placeholder="Your name*"/>
                     <input type="text" name="gmail" id="name" placeholder="Your email address*"/>
                     <input type="text" name="number" id="name" placeholder="Your contact number*"/>
-                    <textarea name="message" placeholder="Your message"></textarea>
+                    <textarea name="message" maxlength="300" placeholder="Your message"></textarea>
                     <div id="buttons">
                         <button type="reset">Reset</button>
                         <button type="submit">Send</button>
