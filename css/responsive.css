@@ -6,10 +6,10 @@
 }
 /*Rezolucija 2*/
 @media screen and (max-width: 1680px){
-    #six{
+    #myskills #six{
         width: 50%;
     }
-    #projects{
+    #myprojects #projects{
         flex-direction: column;
     }
     #myprojects #projects .names2{
@@ -120,7 +120,7 @@
         font-size: 13px;
     }
     #aboutme #about #ana{
-        width: 300px;
+        width: 280px;
     }
     #myskills #six{
         width: 100%;
